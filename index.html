@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items pokemon</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="collapse" id="navbarHeader">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-8 col-md-7 py-4">
+                <h4 class="text-white">Gremio de Rol</h4>
+                <p class="text-muted">Unete a la mejor comunidad de juegos de Rol de latino America</p>
+              </div>
+              <div class="col-sm-4 offset-md-1 py-4">
+                <ul class="list-unstyled">
+                  <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="./index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="./Paginas/Nosotros.html">Nosotros</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="./Paginas/Contacto.html">Contacto</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="./Paginas/Utiles.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      ¿Que debo tener?
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item text-black" href="./Paginas/Juegos.html">Juegos</a></li>
+                      <li><a class="dropdown-item text-black" href="./Paginas/Jugadores.html">Jugadores</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="navbar navbar-dark shadow-sm">
+          <div class="container">
+            <a href="./index.html" class="navbar-brand d-flex align-items-center">
+              <img src="./imagenes/kisspng-sword-shield-vector-sword-5a9bb9e2296d60.4707474415201551061697.png" alt="Logo" width="60" height="48" class="d-inline-block align-text-top">
+              <strong>Alterego</strong>
+            </a><!-- fin logo -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+    </header><!-- fin de encabezado -->
+    <div class="container">
+      <h1 class="text-center">Creacion de Productos y carrito de compra</h1>
+      <div class="row">
+        <div class="col-lg-6">
+            <button id="crear-items" type=" button" class="btn btn-info">Descargar item de la API</button>
+          <div>
+            <h2>Artículos disponibles</h2>
+            <ul class="list-group w-75" id="lista-articulos"></ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-header">Carrito de compras</div>
+            <div class="card-body">
+              <table class="table table-striped" id="tabla-carrito"></table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="main-footer mt-1 position-fixed top-100 start-50 translate-middle">
+      <nav>
+              <ul >
+                  <li><a href="#">Grupo de FB</a></li>
+                  <li><a href="#">Instagram</a></li> 
+              </ul> 
+          </nav>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <!-- <script src="./js/variables.js"></script> -->
+    <script src="./js/poke.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
