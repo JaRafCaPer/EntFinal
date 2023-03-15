@@ -61,16 +61,30 @@
             <button id="crear-items" type=" button" class="btn btn-info">Descargar item de la API</button>
           <div>
             <h2>Artículos disponibles</h2>
-            <ul class="list-group w-75" id="lista-articulos"></ul>
+            <ul class="list-group w-50 h-50 bg-success text-white" id="lista-articulos"></ul>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <div class="card-header">Carrito de compras</div>
-            <div class="card-body">
-              <table class="table table-striped" id="tabla-carrito"></table>
-            </div>
+        <div class="p-4 card col-lg-6 h-75 bg-warning">
+          <h5 class="card-header">Tu Carrito de compras</h5>
+          <div class="p-2 card-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Producto</th>
+                  <th>Precio</th>
+                  <th>Cantidad</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody id="tabla-carrito">
+                <!-- Aquí se mostrarán los productos en el carrito -->
+              </tbody>
+            </table>
+            <p>Total de la compra: <span id="total-compra">$0.00</span></p>
+            <button type="button" class="btn btn-danger" id="limpiar-carrito">Limpiar carrito</button>
+            <a href="#" id="pagar" class="btn btn-info">Pagar</a>
           </div>
+        </div>
         </div>
       </div>
     </div>
@@ -83,7 +97,7 @@
           </nav>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <!-- <script src="./js/variables.js"></script> -->
+    <script src="./js/variables.js"></script>
     <script src="./js/poke.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
