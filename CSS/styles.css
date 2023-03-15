@@ -7,7 +7,7 @@ body{
     background-image:url(../imagenes/Fondo\ desenfocado.webp);
 }
 .encabezado {
-    background-image: linear-gradient( red , yellow);
+  background-image: linear-gradient(pink, cyan);
     top: 0px;
     display: flex;
     justify-content: space-around;
@@ -47,13 +47,13 @@ body{
              ul li:hover ul {
                  position: absolute;
                 display:block;
-                background-image: linear-gradient(red,orange);
+                background-image: linear-gradient(silver, cyan);
                 padding: 20px;
                 border: 2px solid black;
                 transform: skewY(8deg)
                 }
 footer {
-    background-image: linear-gradient( orange , yellow);
+  background-image: linear-gradient(silver, cyan);
     top: 0px;
     display: flex;
     justify-content: space-around;
@@ -75,3 +75,13 @@ footer {
         padding: auto;
         text-decoration: none;
     }
+
+#bgCarrito {
+  background-image: linear-gradient(pink, cyan);
+}
+#pIntro{
+  background-image: linear-gradient(silver, cyan);
+}
+#cardItem{
+  background-color: rgb(11, 51, 51);
+}
