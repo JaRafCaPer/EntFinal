@@ -44,7 +44,6 @@ function crearArticulo(id, nombre, precio, imagen, descripcion) {
         <img class="p-2 card-img-top img-thumbnail w-25 h-50" src=${producto.imagen} alt="Card image cap">
         <p class="p-2 card-text">Descripcion: ${producto.descripcion}</p>
         <input type="number" class="form-control w-25" id="c-${producto.id}" name="cantidad"><br>
-        <button type="button" class="btn btn-danger btn-sm mb-2" data-mdb-toggle="tooltip" title="Mover a deseados">Me gusta</button>
         <button type="button" id="p-${producto.id}" class="btn btn-info btn-sm mb-2" data-mdb-toggle="tooltip" title="Agregar al carrito">Agregar</button>
       </div>
     </div>
@@ -132,7 +131,7 @@ function actualizarCarrito() {
   actualizarCarritoLocalStorage();
 
   if (totalCompra > 50000) {
-    swal("Solo tienes $50.000!","Por favor saca cosas de tu carrito", "success");
+    swal("Solo tienes $50.000!","Por favor saca cosas de tu carrito", "error");
   }
 
 // Agregamos un evento a cada botón "Quitar producto"
