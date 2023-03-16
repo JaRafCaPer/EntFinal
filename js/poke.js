@@ -7,6 +7,14 @@ let fetchedItems = JSON.parse(localStorage.getItem('fetchedItems')) || []; // Re
 
 
 
+
+
+
+
+
+
+
+
 // Obtenemos el carrito guardado en el localStorage y lo cargamos en la variable carrito
 const carritoGuardado = JSON.parse(localStorage.getItem('carrito'));
 const carrito = carritoGuardado || [];
@@ -21,8 +29,8 @@ actualizarCarrito();
 
 function crearArticulo(id, nombre, precio, imagen, descripcion) {
   // Creamos un nuevo elemento LI
-  const nuevoArticulo = document.createElement('li');
-  nuevoArticulo.classList.add('list-group-item');
+  const nuevoArticulo = document.createElement('p');
+  // nuevoArticulo.classList.add('list-group-item');
 
   // Creamos un objeto con la información del artículo
   const producto = {
@@ -35,16 +43,24 @@ function crearArticulo(id, nombre, precio, imagen, descripcion) {
   };
   listaItem.push(producto);
 
+  
   // Creamos el HTML para mostrar la información del artículo
   const contenidoHTML = `
-    <div id="cardItem" class="card w-100 h-50 text-white" style="width: 18rem;">
+    <div id="cardItem" class="card w-100 h-50" style="width: 18rem;">
       <div class="card-body">
-        <h4 class="card-title">${producto.nombre}</h4>
-        <p class="card-text">Precio: $${producto.precio}</p>
-        <img class="p-2 card-img-top img-thumbnail w-25 h-50" src=${producto.imagen} alt="Card image cap">
+        <h4 class="card-title text-center">${producto.nombre}</h4>
+        <img class="p-2 card-img-top img-thumbnail rounded mx-auto d-block" src=${producto.imagen} alt="Card image cap">
         <p class="p-2 card-text">Descripcion: ${producto.descripcion}</p>
-        <input type="number" class="form-control w-25" id="c-${producto.id}" name="cantidad"><br>
-        <button type="button" id="p-${producto.id}" class="btn btn-info btn-sm mb-2" data-mdb-toggle="tooltip" title="Agregar al carrito">Agregar</button>
+        <div class="row">
+        <div class="col-6"><p class="p-2 card-text">Precio: $${producto.precio}</p></div>
+        <div class="col-6"><input type="number" class="form-control w-50 p-1" id="c-${producto.id}" name="cantidad"><br></div>
+        </div>
+        <button type="submit" id="p-${producto.id}" class="btn btn-info btn-sm mb-2 p-2" data-mdb-toggle="tooltip" title="Agregar al carrito">Agregar</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
       </div>
     </div>
   `;
