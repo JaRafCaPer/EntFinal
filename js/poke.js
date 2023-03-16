@@ -8,6 +8,20 @@ let fetchedItems = JSON.parse(localStorage.getItem('fetchedItems')) || []; // Re
 
 
 
+// const apiBtn = document.getElementById('crear-items')
+// const apiData = document.getElementById('api-data')
+// const apiId = 0
+// const apiName = ''
+// const apiCost = ''
+// const apiEfect = ''
+// const apiThumb = ''
+// const listaItem = [];
+// // Obtenemos el elemento UL donde se mostrarán los productos
+// const listaArticulos = document.getElementById('lista-articulos');
+
+// // Obtenemos la tabla donde se mostrará el carrito
+// const tablaCarrito = document.getElementById('tabla-carrito');
+// const cardContainer = document.getElementById("card-container");
 
 
 
@@ -28,6 +42,7 @@ function actualizarCarritoLocalStorage() {
 actualizarCarrito();
 
 function crearArticulo(id, nombre, precio, imagen, descripcion) {
+  listaArticulos.innerHTML = ""
   // Creamos un nuevo elemento LI
   const nuevoArticulo = document.createElement('p');
   // nuevoArticulo.classList.add('list-group-item');
